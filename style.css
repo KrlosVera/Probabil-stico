@@ -1,0 +1,283 @@
+body {
+    font-family: Poppins, serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+#queue-container {
+    margin-top: 50px;
+}
+
+
+#arrival-rate-label {
+    position: absolute;
+    left: 500px;
+    margin-right: 20px;
+    /* Espacio entre el label y la caja de texto */
+
+}
+
+#arrival-rate {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #d4d4d4;
+    border: 2px solid rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
+    text-align: center;
+
+}
+
+#service-rate-label {
+    float: right;
+    /* Mover el label a la derecha */
+    clear: right;
+    /* Limpiar el float para evitar que otros elementos floten a su lado */
+    margin-left: 10px;
+    /* Espacio entre el label y la caja de texto */
+}
+
+#service-rate {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #d4d4d4;
+    border: 2px solid rgb(65, 65, 65);
+    color: rgb(65, 65, 65);
+    text-align: center;
+    float: 500px;
+    /* Mover la caja de texto a la derecha */
+    clear: left;
+}
+
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: aqua;
+    font-family: Poppins, serif;
+}
+
+#queue,
+#stats,
+#simulation-time {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 300px;
+    display: inline-block;
+    text-align: left;
+}
+
+/* Cuadro de simulacion clientes*/
+
+#queue {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid rgba(0, 0, 0, 0);
+    /* Contorno con transparencia */
+    position: absolute;
+    top: 470px;
+    /* Arriba */
+    left: 750px;
+    /* Izquierda */
+    width: 1000px;
+    /* Anchura */
+    height: 145px;
+    /* Altura */
+}
+
+
+#queue img {
+    width: 40px;
+    /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    /* Mantiene la proporción de aspecto */
+    margin-right: 0.5px;
+    /* Agrega un pequeño espacio entre las imágenes */
+}
+
+/* Cambiar la ubicación del botón */
+#start-simulation {
+    /* Puedes utilizar propiedades como 'position', 'top', 'left', 'right', 'bottom' para cambiar la ubicación del botón */
+    position: absolute;
+    /* Por ejemplo, aquí se establece la posición absoluta */
+    top: 250px;
+    /* Se ajusta la distancia desde la parte superior */
+    left: 750px;
+    /* Se ajusta la distancia desde la izquierda */
+}
+
+/* Cambiar el color del botón */
+#start-simulation {
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Puedes utilizar la propiedad 'background-color' para cambiar el color de fondo del botón */
+    background-color: #27cc06;
+    /* Por ejemplo, aquí se establece un color verde */
+    color: white;
+    /* Se establece el color del texto en blanco para que contraste con el fondo */
+    transition: transform 0.3s ease-in-out;
+}
+
+#start-simulation:hover {
+    background-color: #037703;
+}
+
+#start-simulation:active {
+    transform: scale(0.9);
+}
+
+
+#stop-simulation {
+    /* Puedes utilizar propiedades como 'position', 'top', 'left', 'right', 'bottom' para cambiar la ubicación del botón */
+    position: absolute;
+    /* Por ejemplo, aquí se establece la posición absoluta */
+    top: 250px;
+    /* Se ajusta la distancia desde la parte superior */
+    left: 1000px;
+    /* Se ajusta la distancia desde la izquierda */
+}
+
+
+#stop-simulation {
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    /* Puedes utilizar la propiedad 'background-color' para cambiar el color de fondo del botón */
+    background-color: #ec0707;
+    /* Por ejemplo, aquí se establece un color verde */
+    color: white;
+    /* Se establece el color del texto en blanco para que contraste con el fondo */
+    transition: transform 0.3s ease-in-out;
+
+}
+
+#stop-simulation:hover {
+    background-color: #770303;
+}
+
+#stop-simulation:active {
+    transform: scale(0.9);
+}
+
+
+
+#simulation-time {
+    /* Puedes utilizar propiedades como 'position', 'top', 'left', 'right', 'bottom' para cambiar la ubicación del botón */
+    position: absolute;
+    /* Por ejemplo, aquí se establece la posición absoluta */
+    top: 300px;
+    /* Se ajusta la distancia desde la parte superior */
+    left: 150px;
+    /* Se ajusta la distancia desde la izquierda */
+}
+
+#simulation-time {
+    font-size: 50px;
+    text-align: center;
+    background-color: rgb(0, 0, 0, 0);
+    border: none;
+    font-family: 'Courier New', Courier, monospace
+}
+
+.imagen-aparte {
+    width: 30px;
+    /* Ancho de la imagen */
+    height: 30px;
+    /* Altura de la imagen */
+    position: absolute;
+    /* Posición absoluta */
+    top: 100px;
+    /* Distancia desde la parte superior */
+    left: 50%;
+    /* Centrado horizontal */
+    transform: translateX(-50%);
+    /* Ajuste para centrar horizontalmente */
+    border-radius: 50%;
+    /* Bordess redondeados para hacer un círculo */
+    border: 2px solid #ccc;
+    /* Borde sólido con color gris */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra */
+}
+
+#image-container {
+    background-color: rgba(0, 0, 0, 0);
+    /* Contorno con transparencia */
+    position: absolute;
+    top: 450px;
+    /* Arriba */
+    left: 660px;
+    /* Izquierda */
+    width: 80px;
+    /* Anchura */
+    height: 200px;
+    /* Altura */
+}
+
+#image-container img {
+    width: 85px;
+    /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    /* Mantiene la proporción de aspecto */
+    margin-right: 5px;
+    /* Agrega un pequeño espacio entre las imágenes */
+}
+
+
+#imagenPostes {
+    background-color: rgba(168, 4, 4, 0);
+    /* Contorno con transparencia */
+    position: absolute;
+    top: 420px;
+    /* Arriba */
+    left: 750px;
+    /* Izquierda */
+    width: 500px;
+    /* Anchura */
+    height: 240px;
+    /* Altura */
+}
+
+#imagenPostes img {
+    width: 500px;
+    /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+    /* Mantiene la proporción de aspecto */
+    margin-right: 5px;
+    /* Agrega un pequeño espacio entre las imágenes */
+}
+
+#stats {
+    position: absolute;
+    /* Establecer la posición absoluta */
+    top: 500px;
+    /* Distancia desde la parte superior */
+    left: 60px;
+    /* Distancia desde la izquierda */
+    padding: 10px;
+    /* Espaciado interno */
+    border: 1px solid #ccc;
+    /* Borde */
+    background-color: #fff;
+    /* Color de fondo */
+    width: 500px;
+    /* Anchura deseada */
+    font-size: 20px;
+    text-align: center;
+    border: none;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+
+#metrics{
+
+    position: absolute;
+    /* Establecer la posición absoluta */
+    top: 300px;
+    /* Distancia desde la parte superior */
+    left: 1400px;
+}
